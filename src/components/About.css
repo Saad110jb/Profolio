@@ -1,0 +1,143 @@
+.about {
+  padding: 80px 20px;
+  background-color: var(--bg-dark-secondary);
+  border-top: var(--border-neon);
+  border-bottom: var(--border-neon);
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.about-content {
+  margin-bottom: 3.5rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+}
+
+.matrix-title {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.capability-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Glassmorphic Capability Cards */
+.capability-card {
+  background: var(--bg-glass);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border: var(--border-neon);
+  padding: 1.2rem;
+  border-radius: var(--border-radius-lg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.capability-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(100, 255, 218, 0.25);
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.05);
+}
+
+.capability-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.tech-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.tech-category {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.capability-bar-wrapper {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.capability-bar {
+  height: 100%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  border-radius: 2px;
+  transition: width 1s ease-in-out;
+}
+
+/* Capability widths */
+.capability-bar[data-level="Expert"] {
+  width: 95%;
+}
+.capability-bar[data-level="Advanced"] {
+  width: 80%;
+}
+.capability-bar[data-level="Intermediate"] {
+  width: 60%;
+}
+
+.tech-level {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 20px;
+  }
+  
+  .about-content {
+    font-size: 1rem;
+  }
+}

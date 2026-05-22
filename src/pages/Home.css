@@ -1,0 +1,46 @@
+.page-container {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: var(--accent);
+  color: var(--bg-dark);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-top:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.5);
+  transform: translateY(-4px);
+}

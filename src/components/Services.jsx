@@ -9,6 +9,38 @@ import {
 const Services = () => {
   const projects = [
     {
+      id: 'bazarboost',
+      title: 'BazarBoost — Enterprise Multi-Vendor Platform',
+      role: 'Lead Architect',
+      description: (
+        <>
+          <p>
+            An enterprise-grade, multi-vendor e-commerce platform engineered for high scalability, 
+            strict tenant isolation, and automated financial workflows. It features real-time, interactive 
+            price negotiations between shoppers and vendors, and a fully automated merchant micro-financing system.
+          </p>
+          <ul className="project-bullet-list">
+            <li>
+              <strong>Atomic Discount Orchestration:</strong> Eliminates state race conditions during checkout via a 
+              bounded loyalty engine that safely stacks vendor coupons with rolling shopper rewards.
+            </li>
+            <li>
+              <strong>High-Frequency Negotiation Rig:</strong> Powered by a bidirectional Socket.io framework utilizing 
+              functional state updaters, clustered via PM2, Docker, and Nginx to handle intense traffic.
+            </li>
+            <li>
+              <strong>Automated Loan Repayments:</strong> Intercepts order completion events using ACID-safe Mongoose 
+              transactions, automatically deducting outstanding loan balances before routing the net payout to the vendor's wallet.
+            </li>
+          </ul>
+          <p className="project-footer-note">
+            Built for zero-downtime performance, verified by a 20-probe Jest end-to-end integration test suite (under 15ms WebSocket sync time).
+          </p>
+        </>
+      ),
+      stack: ['Socket.io', 'Mongoose', 'Docker', 'PM2', 'Nginx', 'Jest', 'Node.js']
+    },
+    {
       id: 'apa',
       title: 'Agentic Project Architect (APA)',
       role: 'Core Systems Architect',
@@ -115,7 +147,13 @@ const Services = () => {
                 <span className="role-badge">{project.role}</span>
               </div>
               <h3>{project.title}</h3>
-              <p className="project-description">{project.description}</p>
+              <div className="project-description">
+                {typeof project.description === 'string' ? (
+                  <p>{project.description}</p>
+                ) : (
+                  project.description
+                )}
+              </div>
               <div className="project-tech-badges">
                 {project.stack.map((tech) => (
                   <span key={tech} className="tech-badge">{tech}</span>

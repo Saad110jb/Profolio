@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import About from '../components/About';
 import Services from '../components/Services';
+import FiverrServices from '../components/FiverrServices';
 import Footer from '../components/Footer';
 import './Home.css';
 
@@ -61,6 +62,9 @@ const Home = () => {
 
       {/* ✅ Services & Projects section */}
       <Services />
+
+      {/* ✅ Fiverr Gigs section */}
+      <FiverrServices />
 
       {/* ✅ Optional second ad, but keep it near the bottom */}
       <AdBanner slot="9876543210" />

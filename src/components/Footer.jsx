@@ -12,6 +12,9 @@ const Footer = () => {
         <a href="https://linkedin.com/in/muhammad-saad-535a9126b/" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
+        <a href="https://www.fiverr.com/s/BRQ5WYW" target="_blank" rel="noopener noreferrer">
+          Fiverr
+        </a>
         <a href="mailto:ms0574203@gmail.com">Email</a>
       </div>
     </footer>

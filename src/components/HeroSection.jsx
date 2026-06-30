@@ -11,6 +11,7 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt
 } from 'react-icons/fa';
+import { SiFiverr } from 'react-icons/si';
 
 const HeroSection = () => {
   return (
@@ -57,12 +58,18 @@ const HeroSection = () => {
           <a href={resume} className="btn-primary" download>
             <FaDownload /> Download Resume
           </a>
+          <a href="https://www.fiverr.com/s/BRQ5WYW" target="_blank" rel="noopener noreferrer" className="btn-fiverr">
+            <SiFiverr size={22} style={{ marginRight: '4px' }} /> Hire Me on Fiverr
+          </a>
           <div className="social-icons">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
             <a href="https://linkedin.com/in/muhammad-saad-535a9126b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedinIn />
+            </a>
+            <a href="https://www.fiverr.com/s/BRQ5WYW" target="_blank" rel="noopener noreferrer" aria-label="Fiverr">
+              <SiFiverr />
             </a>
           </div>
         </div>

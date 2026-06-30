@@ -46,6 +46,7 @@ const Navbar = () => {
         <button onClick={() => scrollToSection('home')}>Home</button>
         <button onClick={() => scrollToSection('about')}>About</button>
         <button onClick={() => scrollToSection('services')}>Services</button>
+        <button onClick={() => scrollToSection('fiverr-gigs')}>Fiverr Gigs</button>
       </div>
       <div className="hamburger" onClick={handleToggle} aria-label="Toggle navigation">
         <span className={isOpen ? 'open' : ''}></span>

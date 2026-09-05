@@ -118,6 +118,10 @@
 
 .project-header {
   margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .role-badge {
@@ -130,6 +134,19 @@
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 500;
+}
+
+.hackathon-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: rgba(255, 184, 0, 0.08);
+  border: 1px solid rgba(255, 184, 0, 0.25);
+  border-radius: var(--border-radius-sm);
+  color: #ffc107;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.1);
 }
 
 .project-card h3 {

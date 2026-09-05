@@ -9,6 +9,40 @@ import {
 const Services = () => {
   const projects = [
     {
+      id: 'docucity-lahore',
+      title: 'DocuCity Lahore — AI Municipal Document & Geospatial Policy Platform',
+      role: 'Lead AI & Geospatial Systems Architect',
+      hackathon: 'Smart City Hackathon Lahore',
+      description: (
+        <>
+          <p>
+            An AI-powered municipal document intelligence and geospatial policy mapping platform that transforms static, unstructured government records (LDA, WASA, MCL, Punjab Urban Unit) into an intelligent, searchable, and interactive system.
+          </p>
+          <ul className="project-bullet-list">
+            <li>
+              <strong>Multimodal Ingestion & Bilingual OCR:</strong> Processes scanned gazettes and multi-page PDFs using PaddleOCR and PyMuPDF to extract structured text, tables, and layouts in English and Urdu.
+            </li>
+            <li>
+              <strong>Entity Extraction & Spatial Resolution:</strong> Automatically extracts regulatory entities (FAR, building heights, setback rules, gazette IDs) and resolves spatial boundaries into OpenStreetMap GeoJSON layers.
+            </li>
+            <li>
+              <strong>Interactive GIS Policy Explorer:</strong> Integrated Leaflet.js interactive map enabling users to explore color-coded zoning overlays and inspect regulatory bylaws per municipal zone.
+            </li>
+            <li>
+              <strong>Grounded RAG Policy Assistant:</strong> Utilizes ChromaDB vector storage and Google Gemini API for natural language queries with exact page, section, and clause citations to eliminate hallucinations.
+            </li>
+            <li>
+              <strong>Verification & Security Studio:</strong> Reviewer workflow for authorized officials to verify OCR extractions side-by-side with automated PII/CNIC redaction and role-based access control (RBAC).
+            </li>
+          </ul>
+          <p className="project-footer-note">
+            Developed for Smart City Hackathon Lahore to accelerate municipal policy discovery and foster inter-departmental collaboration across urban governance agencies.
+          </p>
+        </>
+      ),
+      stack: ['Google Gemini API', 'ChromaDB', 'PaddleOCR', 'PyMuPDF', 'Leaflet.js', 'OpenStreetMap', 'FastAPI', 'Python', 'React']
+    },
+    {
       id: 'bazarboost',
       title: 'BazarBoost — Enterprise Multi-Vendor Platform',
       role: 'Lead Architect',
@@ -145,6 +179,9 @@ const Services = () => {
             <div key={project.id} className="project-card">
               <div className="project-header">
                 <span className="role-badge">{project.role}</span>
+                {project.hackathon && (
+                  <span className="hackathon-badge">🏆 {project.hackathon}</span>
+                )}
               </div>
               <h3>{project.title}</h3>
               <div className="project-description">

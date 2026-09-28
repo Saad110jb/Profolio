@@ -36,7 +36,7 @@ const Services = () => {
             </li>
           </ul>
           <p className="project-footer-note">
-            Developed for Smart City Hackathon Lahore to accelerate municipal policy discovery and foster inter-departmental collaboration across urban governance agencies.
+            Developed for Smart City Hackathon Lahore 2026 (City Intelligence Track — Sponsored by Code for Pakistan & Canva) to accelerate municipal policy discovery and foster inter-departmental collaboration across urban governance agencies.
           </p>
         </>
       ),

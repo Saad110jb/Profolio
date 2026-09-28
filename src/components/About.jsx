@@ -18,6 +18,30 @@ const About = () => {
     { name: 'Docker', level: 'Intermediate', category: 'DevOps' }
   ];
 
+  const achievements = [
+    {
+      title: 'Bronze Rank — Devpost',
+      subtitle: 'X Hackathons Level 1',
+      description: 'Earned by submitting 3+ eligible projects to separate hackathons.',
+      badge: '🥉 Bronze Rank',
+      icon: '🏆'
+    },
+    {
+      title: 'First In-Person Hackathon',
+      subtitle: 'Smart City Hackathon Lahore 2026',
+      description: 'Submitted DocuCity Lahore under the City Intelligence track (Sponsored by Code for Pakistan & Canva).',
+      badge: '📍 In-Person',
+      icon: '🏙️'
+    },
+    {
+      title: 'Generalist Achiever',
+      subtitle: 'Cross-Domain Themes',
+      description: 'Earned by submitting to 3 hackathons with diverse technological themes.',
+      badge: '🌟 Generalist',
+      icon: '⚡'
+    }
+  ];
+
   return (
     <section className="about" id="about">
       <div className="about-container">
@@ -35,7 +59,23 @@ const About = () => {
           </p>
         </div>
 
-        <h3 className="matrix-title">Capability Matrix</h3>
+        {/* Hackathon Achievements */}
+        <h3 className="matrix-title">Hackathon & Devpost Achievements</h3>
+        <div className="achievements-grid">
+          {achievements.map((item, idx) => (
+            <div key={idx} className="achievement-card">
+              <div className="achievement-header">
+                <span className="achievement-icon">{item.icon}</span>
+                <span className="achievement-badge">{item.badge}</span>
+              </div>
+              <h4 className="achievement-title">{item.title}</h4>
+              <span className="achievement-subtitle">{item.subtitle}</span>
+              <p className="achievement-desc">{item.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="matrix-title" style={{ marginTop: '3rem' }}>Capability Matrix</h3>
         <div className="capability-matrix">
           {capabilities.map((tech) => (
             <div key={tech.name} className="capability-card">
